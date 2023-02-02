@@ -1,0 +1,38 @@
+﻿<Window x:Class="App.Universidade.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Universidade" Height="200" Width="300" Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.ColumnSpan="2">
+            <Menu.Background>
+                <ImageBrush ImageSource="wall.png"/>
+            </Menu.Background>
+
+            <MenuItem Header="Cadastros" Background="White" >
+                <MenuItem Header="Universidades..." Click="UniversidadeWindow_Click" />
+                <MenuItem Header="Departamentos..." Click="DepartamentoWindow_Click" />
+                <MenuItem Header="Cursos..." Click="CursoWindow_Click" />
+            </MenuItem>
+            <MenuItem Header="Operações" Background="White" >
+                <MenuItem Header="Cadastro Departamento..." Click="CadDepWindow_Click" />
+                <MenuItem Header="Cadastro Curso..." Click="CadCurWindow_Click" />
+                <MenuItem Header="Listar Departamento na universidade..." Click="ListDepWindow_Click" />
+                <MenuItem Header="Listar cursos no Departamento..." Click="ListCurWindow_Click" />
+            </MenuItem>
+            
+        </Menu>
+        <Button Visibility="Hidden" Click="Universidades_Click" Content="Cadastrar Universidade" HorizontalAlignment="Left" Margin="23,19,0,0" VerticalAlignment="Top"/>
+        <Button Visibility="Hidden" Click="Departamentos_Click" Content="Cadastrar Departamento" HorizontalAlignment="Left" Margin="23,44,0,0" VerticalAlignment="Top"/>
+        <Button Visibility="Hidden" Click="Cursos_Click" Content="Cadastrar Curso" HorizontalAlignment="Left" Margin="23,69,0,0" VerticalAlignment="Top"/>
+        <Button Visibility="Hidden" Click="CadDepWindow_Click" Content="Cadastrar departamento na universidade" HorizontalAlignment="Left" Margin="23,94,0,0" VerticalAlignment="Top"/>
+        <Button Visibility="Hidden" Click="CadCurWindow_Click" Content=" Cadastrar curso no departamento " HorizontalAlignment="Left" Margin="23,94,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
